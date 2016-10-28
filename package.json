@@ -1,5 +1,6 @@
 {
   "name": "ionic-ion-drawer",
   "version": "0.0.1",
+  "main": "ionic.contrib.drawer.js",
   "private": true
 }
