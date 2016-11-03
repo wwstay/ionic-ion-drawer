@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": "eslint:recommended",
+  "plugins": ["angular"],
+  "rules": {
+    "comma-dangle": [1, "always-multiline"],
+    "angular/controller-name": [2,"/[A-Z].*Ctrl/"],
+    "angular/controller-as": [1]
+  },
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "globals": {
+    "angular": true,
+    "module": true,
+    "inject": true,
+    "require": true,
+    "ionic": true,
+    "cordova": true,
+    "StatusBar": true,
+    "Connection": true,
+    "process": true,
+    "google": true,
+    "_": true
+  }
+}

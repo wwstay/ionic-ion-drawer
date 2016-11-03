@@ -62,7 +62,7 @@ angular.module('ionic.contrib.drawer', ['ionic'])
 
   var startTargetDrag = function(e) {
     disableAnimation();
-    
+
     dragging = true;
     isTargetDrag = true;
     offsetX = lastX - startX;
@@ -106,7 +106,7 @@ angular.module('ionic.contrib.drawer', ['ionic'])
       startDragX = e.gesture.touches[0].pageX;
       startX = e.gesture.touches[0].pageX;
     }
-    
+
     var position = el.getBoundingClientRect();
 
     lastX = e.gesture.touches[0].pageX;
@@ -116,7 +116,7 @@ angular.module('ionic.contrib.drawer', ['ionic'])
       if (isTarget(e.target)) {
         startX = position.left;
         startTargetDrag(e);
-        
+
       } else if (Math.abs(lastX - startX) > thresholdX) {
         if (side == RIGHT) {
           if (startX > edgeX) {
@@ -130,11 +130,11 @@ angular.module('ionic.contrib.drawer', ['ionic'])
       }
     } else {
       newX = Math.min(0, ((self.opened ? 0 : -width) + (lastX - offsetX)));
-      
+
       if (Math.abs(startDragX - lastX) > thresholdX) {
         $ionicScrollDelegate.freezeAllScrolls(true);
       }
-        
+
       if (side == RIGHT) {
         newX = Math.max(0, width - (clientWidth - (lastX - offsetX)));
       }
@@ -182,7 +182,7 @@ angular.module('ionic.contrib.drawer', ['ionic'])
     self.opened = true;
 
     $document[0].body.classList.add('drawer-open');
-    
+
     enableAnimation();
     ionic.requestAnimationFrame(function() {
       if(side === LEFT) {
@@ -191,7 +191,7 @@ angular.module('ionic.contrib.drawer', ['ionic'])
         el.style.transform = el.style.webkitTransform = 'translate3d(0%, 0, 0)';
       }
     });
-    
+
   };
 }])
 
